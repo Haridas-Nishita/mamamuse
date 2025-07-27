@@ -4,8 +4,6 @@
 
 ---
 
-![MamaMuse Banner](https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80)
-
 ## 🌸 Inspiration
 Pregnancy is a beautiful journey, but it can be filled with emotional ups and downs, anxiety, and loneliness. Inspired by real stories and the universal need for empathy, MamaMuse was created to be a digital companion—listening, uplifting, and connecting moms-to-be everywhere.
 
@@ -50,7 +48,7 @@ MamaMuse is an AI-powered mental wellness platform for expecting mothers. It off
 ## ⚡ Quick Start
 1. **Clone the Repo:**
    ```bash
-   git clone https://github.com/yourusername/mamamuse.git
+   git clone https://github.com/Haridas-Nishita/mamamuse.git
    cd mamamuse
    ```
 2. **Set Up Environment:**
@@ -92,8 +90,6 @@ MamaMuse is an AI-powered mental wellness platform for expecting mothers. It off
 - Mobile app for on-the-go support.
 - Deeper, personalized wellness insights.
 
-## 🤝 Contributing
-Pull requests are welcome! For major changes, please open an issue first to discuss what you’d like to change.
 
 ## 📄 License
 [MIT](LICENSE)
