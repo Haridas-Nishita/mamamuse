@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MamaMuse: Your Pregnancy Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        peach: '#ff9999',
+                        'peach-dark': '#ff6666',
+                        plum: '#4a2e4a'
+                    },
+                    fontFamily: {
+                        lora: ['Lora', 'serif'],
+                        poppins: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+</head>
+<body class="min-h-screen">
+    <header class="bg-white bg-opacity-75 p-4 text-center shadow-md">
+        <h1 class="text-3xl">MamaMuse: Your Pregnancy Companion 🤰💖</h1>
+    </header>
+    
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="max-w-4xl mx-auto p-4">
+                {% for category, message in messages %}
+                    <div class="flash-message p-4 rounded-lg mb-4 transition-opacity duration-300 {{ 'bg-green-100 text-green-800' if category == 'success' else 'bg-red-100 text-red-800' }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+    
+    {% block content %}{% endblock %}
+
+    <footer class="mt-8 py-4 text-center text-sm text-plum">
+        <p>Made with 💖 for the AI vs H.I. Global Hackathon</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="max-w-md mx-auto mt-8 p-6 bg-white rounded-lg shadow-lg">
+    <h2 class="text-2xl mb-6 text-center">Welcome to MamaMuse 🌸</h2>
+    <form method="POST" class="space-y-4">
+        <div>
+            <select name="auth_option" class="w-full mb-4 p-3 border-2 border-peach rounded-lg font-poppins">
+                <option value="Login">Login</option>
+                <option value="Sign Up">Sign Up</option>
+            </select>
+        </div>
+        <div>
+            <input type="email" name="email" placeholder="Email address" class="w-full" required>
+        </div>
+        <div>
+            <input type="password" name="password" placeholder="Password (6+ characters)" class="w-full" required minlength="6">
+        </div>
+        <button type="submit" class="btn w-full">Continue</button>
+    </form>
+    <div class="mt-6 text-center text-sm">
+        <p>Your safe space for pregnancy support 💕</p>
+    </div>
+</div>
+{% endblock %}

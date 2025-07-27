@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="max-w-4xl mx-auto mt-8 p-6">
+    <!-- Navigation Tabs -->
+    <div class="tab-list">
+        <a href="{{ url_for('home') }}" class="tab">Home</a>
+        <a href="{{ url_for('diary_bot') }}" class="tab">Diary-Bot</a>
+        <a href="{{ url_for('community') }}" class="tab">Community</a>
+        <a href="{{ url_for('mental_summary') }}" class="tab active">Mental Summary</a>
+    </div>
+
+    <!-- Today's Summary -->
+    <div class="bg-white p-6 rounded-lg shadow-lg mb-6 mt-6">
+        <h2 class="text-2xl mb-4">Today's Mental Wellness 🌸</h2>
+        <div class="space-y-4">
+            <div class="flex items-center space-x-4">
+                <div class="text-4xl">{{ today_emoji }}</div>
+                <div>
+                    <h3 class="text-xl text-plum">Overall Mood</h3>
+                    <p>{{ today_mood_description }}</p>
+                </div>
+            </div>
+            <div class="mt-4">
+                <h4 class="text-lg text-plum mb-2">Today's Insights</h4>
+                <p class="text-gray-700">{{ today_insights }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Emotion Analysis -->
+    <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+        <h3 class="text-xl mb-4">Emotion Patterns 💭</h3>
+        {% if emotion_chart %}
+            {{ emotion_chart | safe }}
+        {% else %}
+            <p class="text-gray-600">Start chatting with Muse to see your emotion patterns!</p>
+        {% endif %}
+    </div>
+
+    <!-- Daily Affirmations -->
+    <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+        <h3 class="text-xl mb-4">Your Daily Affirmations ✨</h3>
+        <div class="space-y-4">
+            {% for affirmation in daily_affirmations %}
+            <div class="p-4 bg-pink-50 rounded-lg">
+                <p class="text-plum">{{ affirmation }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Wellness Tips -->
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl mb-4">Personalized Wellness Tips 🌿</h3>
+        <div class="space-y-4">
+            {% for tip in wellness_tips %}
+            <div class="flex items-start space-x-3">
+                <span class="text-peach">•</span>
+                <p class="text-gray-700">{{ tip }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

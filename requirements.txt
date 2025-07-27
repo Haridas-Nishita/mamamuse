@@ -1,0 +1,10 @@
+flask
+supabase
+requests
+pandas
+plotly
+python-dotenv
+transformers
+torch
+gunicorn
+accelerate

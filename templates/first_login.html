@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="max-w-md mx-auto mt-8 p-6 bg-white rounded-lg shadow-lg">
+    <h2 class="text-2xl mb-6 text-center">Tell us about yourself 🌸</h2>
+    <form method="POST" class="space-y-4">
+        <div>
+            <label class="block text-plum mb-2">Your Name</label>
+            <input type="text" name="name" placeholder="e.g., Priya" class="w-full" required>
+        </div>
+        <div>
+            <label class="block text-plum mb-2">Your Age</label>
+            <input type="number" name="age" min="18" max="50" placeholder="Your age" class="w-full" required>
+        </div>
+        <div>
+            <label class="block text-plum mb-2">Current Pregnancy Week</label>
+            <input type="number" name="week" min="1" max="40" placeholder="Week of pregnancy" class="w-full" required>
+            <p class="mt-1 text-sm text-gray-500">Week 1-40 of your pregnancy journey</p>
+        </div>
+        <button type="submit" class="btn w-full">Begin Your Journey</button>
+    </form>
+    <div class="mt-6 text-center space-y-2">
+        <p class="text-sm">This information helps us personalize your experience 💖</p>
+        <p class="text-xs text-gray-500">You can update this later in your profile</p>
+    </div>
+</div>
+{% endblock %}
