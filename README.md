@@ -117,7 +117,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/mamamuse.git
+   git clone https://github.com/Haridas-Nishita/mamamuse.git
    cd mamamuse
    ```
 2. **Set Up Environment**
